@@ -1,0 +1,100 @@
+:root {
+  --navy-blue-dark: #0a0a23;
+  --navy-blue-medium: #0a0a23;
+  --light-slate: #8892b0;
+  --lightest-slate: #ccd6f6;
+  --cyan-accent: #99c4f9;
+  --glow-color: #a7cdf9;
+}
+
+.internshipSection {
+  position: relative;
+  background: #0a0a23;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 60px;
+  
+}
+
+.internshipGrid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 20px;
+}
+
+.internshipCard {
+  background-color: rgba(10, 10, 35, 0.7);
+  padding: 24px;
+  border-radius: 16px;
+  border: 2px solid #ffffff; /* THICK BORDER */
+  box-shadow: 0 0 4px #f3f3f5;
+  backdrop-filter: blur(10px);
+  color: var(--lightest-slate);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.internshipCard:hover {
+  transform: translateY(-5px);
+  box-shadow:  0 0 5px var(--cyan-accent);
+  border-color: rgb(216, 230, 245);
+}
+
+.company {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--lightest-slate);
+  margin-bottom: 6px;
+}
+
+.role {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cyan-accent);
+  margin-bottom: 6px;
+}
+
+.date {
+  font-size: 0.95rem;
+  color: var(--light-slate);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.responsibilities {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--lightest-slate);
+}
+
+.responsibilities li {
+  margin-bottom: 8px;
+}
+.certificateLink {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: rgb(157, 186, 218);
+  color: #000000f7;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.certificateLink:hover {
+  background: rgb(31, 31, 69);
+  color: #f6f2f2f7;
+
+}

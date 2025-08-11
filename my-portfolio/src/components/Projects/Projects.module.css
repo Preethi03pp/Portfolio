@@ -1,0 +1,141 @@
+:root {
+ --navy-blue-dark: #0f172a;
+ --navy-blue-medium: #010121;
+ --gray-slate: #94a3b8;
+ --white-smoke: #f1f5f9;
+ --electric-blue: #d9eefc;
+ --purple-glow: #77a8f5;
+}
+
+.projectsSection {
+ position: relative;
+ min-height: 100vh;
+ background-color: #0a0a23;
+ color: var(--gray-slate);
+ text-align: center;
+ overflow: hidden;
+}
+
+.heading {
+ font-size: 3rem;
+ margin-bottom: 3rem;
+ color: var(--white-smoke);
+}
+
+.projectsGrid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+.projectCard {
+ background-color: rgba(255, 255, 255, 0.05);
+ border: 2px solid rgba(180, 199, 224, 0.795);
+ border-radius: 20px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+ padding: 2rem;
+ transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+ position: relative;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ --x: 50%;
+ --y: 50%;
+}
+
+.projectCard::after {
+ content: '';
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 15px;
+ opacity: 0;
+ pointer-events: none;
+ transition: opacity 0.4s ease;
+ background: radial-gradient(
+   600px circle at var(--x) var(--y),
+   rgba(0, 255, 255, 0.1),
+   transparent 80%
+ );
+}
+
+.projectCard:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+ background-color: var(--navy-blue-medium); /* Darker background on hover */
+}
+
+.projectCard:hover::after {
+ opacity: 1;
+}
+
+.projectTitle {
+ font-size: 1.5rem;
+ color: var(--electric-blue);
+ margin-bottom: 0.5rem;
+}
+
+.projectDescription {
+ color: var(--gray-slate);
+ flex-grow: 1;
+ margin-bottom: 1.5rem;
+}
+
+.techStack {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+ margin-bottom: 1rem;
+}
+
+.techBadge {
+ background-color: rgba(0, 255, 255, 0.1);
+ color: var(--electric-blue);
+ padding: 0.25rem 0.75rem;
+ border-radius: 20px;
+ font-size: 0.8rem;
+}
+
+.projectLinks {
+ display: flex;
+ align-items: start;
+ gap: 3rem;
+}
+
+.linkButton {
+ background-image: linear-gradient(
+   45deg,
+   var(--electric-blue),
+   var(--purple-glow)
+ );
+ background-size: 200% 100%;
+ color: var(--navy-blue-dark);
+ border: none;
+ padding: 0.6rem 1.8rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: bold;
+ letter-spacing: 1px;
+ transition: all 0.4s ease;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+}
+
+.linkButton:hover {
+ transform: translateY(-3px);
+ background-position: 100% 0;
+ box-shadow: 0 8px 25px rgba(100, 100, 255, 0.5);
+ color: var(--white-smoke);
+}
+
+.linkButton:active {
+ transform: translateY(0);
+ box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}

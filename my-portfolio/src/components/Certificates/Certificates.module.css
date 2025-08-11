@@ -1,0 +1,110 @@
+:root {
+  --navy-blue-dark: #0f172a;
+  --navy-blue-medium: #010121;
+  --gray-slate: #94a3b8;
+  --white-smoke: #f1f5f9;
+  --electric-blue: #d9eefc;
+  --purple-glow: #77a8f5;
+}
+
+.certificatesSection {
+  position: relative;
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background-color: #0a0a23;
+  color: var(--gray-slate);
+  text-align: center;
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: var(--white-smoke);
+}
+
+.certificatesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.certificateCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(180, 199, 224, 0.795);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  --x: 50%;
+  --y: 50%;
+  backdrop-filter: blur(8px);
+}
+
+.certificateCard::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    600px circle at var(--x) var(--y),
+    rgba(0, 255, 255, 0.1),
+    transparent 80%
+  );
+}
+
+.certificateCard:hover {
+  transform: translateY(-5px);
+  background-color: var(--navy-blue-medium);
+  animation: flickerGlow 2s infinite;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.certificateCard:hover::after {
+  opacity: 1;
+}
+
+@keyframes flickerGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px var(--electric-blue), 0 0 20px var(--purple-glow);
+    border-color: rgba(180, 199, 224, 0.9);
+  }
+  50% {
+    box-shadow: 0 0 5px var(--purple-glow), 0 0 10px var(--electric-blue);
+    border-color: rgba(180, 199, 224, 0.5);
+  }
+}
+
+.certificateName {
+  font-size: 1.5rem;
+  color: var(--electric-blue);
+  margin-bottom: 0.5rem;
+}
+
+.certificateIssuer {
+  font-size: 1rem;
+  color: var(--gray-slate);
+  margin-bottom: 0.5rem;
+}
+
+.certificateDate {
+  font-size: 0.9rem;
+  color: var(--white-smoke);
+  opacity: 0.8;
+}
