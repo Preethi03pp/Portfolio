@@ -84,11 +84,9 @@ const Projects = () => {
             </div>
             <div className={styles.projectLinks}>
               <a href={project.githubLink} className={styles.linkButton} target="_blank" rel="noopener noreferrer">
-                GitHub
+                Source Code
               </a>
-              <a href={project.demoLink} className={styles.linkButton} target="_blank" rel="noopener noreferrer">
-                Demo
-              </a>
+              
             </div>
           </motion.div>
         ))}

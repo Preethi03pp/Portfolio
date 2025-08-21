@@ -71,20 +71,31 @@
 }
 
 .submitButton {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  border-radius: 10px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  background-image: linear-gradient(
+   45deg,
+   var(--electric-blue),
+   var(--purple-glow)
+ );
+ background-size: 200% 100%;
+ color: var(--navy-blue-dark);
+ border: none;
+ padding: 0.6rem 1.8rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: bold;
+ letter-spacing: 1px;
+ transition: all 0.4s ease;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
 }
 
 .submitButton:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(1.05);
+transform: translateY(-3px);
+ background-position: 100% 0;
+ box-shadow: 0 8px 25px rgba(100, 100, 255, 0.5);
+ color: var(--white-smoke);
 }
 
 .socialIcons {

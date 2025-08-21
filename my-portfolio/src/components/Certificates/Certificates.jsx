@@ -5,21 +5,26 @@ import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 
 const certificatesData = [
   {
-    name: 'AWS Certified Cloud Practitioner',
-    issuer: 'Amazon Web Services',
-    date: 'Jan 2024',
+    name: 'Software Engineering and Agile Software Development',
+    issuer: 'OnWingspan',
+    date: 'Aug 2024',
+    link: '/certificates/Infosys Agile.pdf' 
   },
   {
-    name: 'Introduction to Data Science',
-    issuer: 'Coursera',
-    date: 'Oct 2023',
+    name: 'TCS iON Career Edge - Young Professional',
+    issuer: 'Tata Consultancy Services',
+    date: 'Jun 2024',
+    link: '/certificates/TCSion.pdf'
   },
   {
-    name: 'The Complete JavaScript Course',
-    issuer: 'Udemy',
-    date: 'Aug 2023',
-  },
+    name: 'Java Programming for Beginners',
+    issuer: 'NPTEL / Online Platform',
+    date: 'Aug 2025',
+    link: '/certificates/Java.pdf'
+  }
 ];
+
+
 
 const Certificates = () => {
   const containerRef = useRef(null);
@@ -88,6 +93,15 @@ const Certificates = () => {
               <h3 className={styles.certificateName}>{cert.name}</h3>
               <p className={styles.certificateIssuer}>{cert.issuer}</p>
               <span className={styles.certificateDate}>{cert.date}</span>
+  
+            <a 
+              href={cert.link} 
+              className={styles.viewButton} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              View Certificate
+            </a>
             </motion.div>
           ))}
         </div>

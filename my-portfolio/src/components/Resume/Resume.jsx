@@ -6,7 +6,7 @@ import AnimatedBackground from '../AnimatedBackground/AnimatedBackground'; // âœ
 const Resume = () => {
   return (
     <section className={styles.resumeSection}>
-      <AnimatedBackground /> {/* âœ… Add this for background only */}
+      <AnimatedBackground />
 
       <motion.div
         className={styles.resumeContainer}
@@ -20,7 +20,7 @@ const Resume = () => {
         <div className={styles.flexContainer}>
           {/* Resume content on left */}
           <div className={styles.resumeContent}>
-            <p>You can download my resume by clicking the button below.</p>
+            <h1>You can download my resume by clicking the button below.</h1>
             <a href="/Resume.pdf" download className={styles.downloadBtn}>
               Download Resume
             </a>

@@ -8,25 +8,25 @@ const educationData = [
     institution: "St. Philomena's College Mysore",
     degree: 'Master of Computer Application',
     date: '2023 - 2025',
-    description: 'Completed a four-year program focusing on software development, data structures, and algorithms. Achieved a GPA of 3.8/4.0.',
+    description: 'Pursuing a Master of Computer Applications (MCA) focusing on machine learning, data structure, and software engineering. Current CGPA: 8.5/10.',
   },
   {
     institution: 'JSS SMI UG and PG Studies Dharwad',
     degree: 'Bachelor of Computer Application',
     date: '2020 - 2023',
-    description: 'Graduated with honors, participating in various clubs and extracurricular activities.',
+    description: 'Completed a three-year program focusing on web technologies, database management systems, and operating systems. Achieved a CGPA of 8.2/10.',
   },
   {
     institution: 'Science Academy College Davanagere',
     degree: 'PUC',
     date: '2018 - 2020',
-    description: 'Graduated with honors, participating in various clubs and extracurricular activities.',
+    description: 'Completed pre-university education with a focus on Physics, Chemistry, Mathematics, and Biology. Achieved a percentage of 64.83%.',
   },
   {
     institution: 'Sri Siddaganga Composite School Davanagere',
     degree: 'SSLC',
     date: '2017 - 2018',
-    description: 'Graduated with honors, participating in various clubs and extracurricular activities.',
+    description: 'Completed secondary education with a percentage of 77.12%.',
   },
 ];
 
