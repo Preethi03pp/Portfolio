@@ -37,6 +37,7 @@ const skillsData = [
       { name: 'Git', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
       { name: 'GitHub', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
       { name: 'JMeter', url: 'https://jmeter.apache.org/images/jmeter_square.png' },
+      { name: 'Postman', url: 'https://www.svgrepo.com/show/354202/postman-icon.svg' }
     ],
   },
   {
