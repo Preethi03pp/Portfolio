@@ -8,7 +8,7 @@ const educationData = [
     institution: "St. Philomena's College Mysore",
     degree: 'Master of Computer Application',
     date: '2023 - 2025',
-    description: 'Pursuing a Master of Computer Applications (MCA) focusing on machine learning, data structure, and software engineering. CGPA: 8.1/10.',
+    description: 'Pursuing a Master of Computer Applications (MCA) focusing on machine learning, data structure, and software engineering. Current CGPA: 8.5/10.',
   },
   {
     institution: 'JSS SMI UG and PG Studies Dharwad',

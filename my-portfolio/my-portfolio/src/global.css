@@ -1,0 +1,44 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap');
+
+/* Global styles and CSS variables for theming */
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #faf9f9;
+  --header-bg: #1d1d5c;
+  --card-bg: #fff;
+  --accent-color: #3498db;
+  --heading-color: #b4e1ff;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --header-bg: #1e1e1e;
+  --card-bg: #222;
+  --accent-color: #addefe;
+  --heading-color: #ecf0f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--heading-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}

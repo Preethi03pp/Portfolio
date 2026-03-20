@@ -1,0 +1,111 @@
+/*
+ * Skills.module.css
+ * Final version with all headings and skill cards centered.
+ */
+
+/* Main Section Layout */
+.skillsSection {
+  position: relative;
+  padding: 4rem 1rem;
+  background-color: #0a0a23;
+  overflow: hidden;
+}
+
+.skillsContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main Heading Styles */
+.heading {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Category Block */
+.categoryBlock {
+  margin-bottom: 3rem;
+}
+
+/* * REVISED: Subheading Styles */
+.categoryTitle {
+  color: #e1f3f6;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center; 
+  padding-bottom: 0.5rem; 
+  display: inline-block; 
+  padding-left: 20vh; 
+  font-weight: 600;
+}
+
+/* Skills Grid Layout */
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Individual Skill Card */
+.skillCard {
+  background-color: rgba(248, 245, 245, 0.228);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px) scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 216, 255, 0.2);
+}
+
+.skillIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.skillName {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skillsContainer {
+    padding: 0 1.5rem;
+  }
+  .skillCard {
+    width: 100px;
+    height: 100px;
+  }
+  .skillIcon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+  .categoryTitle {
+    font-size: 1.4rem;
+  }
+}

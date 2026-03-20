@@ -1,0 +1,171 @@
+/* Base styles for the hero section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a23; /* white or light tone */
+  color: var(--text-color);
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  padding: 4rem 8%;
+  box-sizing: border-box;
+}
+
+/* Canvas for the animated background */
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Container for the main content */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+  padding: 7rem 0;
+}
+
+/* Greeting text */
+.greeting {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--heading-color);
+  font-weight: 500;
+}
+
+/* Main name/title */
+.title {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--accent-color); /* Blue as in screenshot */
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Subtitle (e.g., Full Stack Developer) */
+.subtitle {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+/* Tagline below subtitle */
+.tagline {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-color);
+  max-width: 500px;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* Social media links container */
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.socialIcon {
+  font-size: 1.6rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: var(--accent-color);
+}
+
+/* Resume button (CTA) */
+.ctaButton {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/* Right-side illustration (vector) */
+.heroIllustration {
+  position: relative;
+  z-index: 1;
+  width: 40%;
+  max-width: 500px;
+}
+
+.heroIllustration img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Optional: Scroll-down indicator */
+.scrollDown {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  animation: bounce 2s infinite;
+  z-index: 2;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+    justify-content: flex-start;
+  }
+
+  .heroContent {
+    padding: 1.5rem 1rem;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .heroIllustration {
+    width: 80%;
+    margin-top: 2rem;
+  }
+
+  .tagline {
+    max-width: 100%;
+  }
+
+  .ctaButton {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
